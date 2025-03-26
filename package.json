@@ -24,7 +24,7 @@
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.479.0",
-    "next": "15.2.1",
+    "next": "15.2.3",
     "next-auth": "5.0.0-beta.25",
     "next-mdx-remote-client": "^2.1.1",
     "nextjs-toploader": "^3.7.15",
