@@ -84,3 +84,9 @@ model Feedback {
   feedback  String
   createdAt DateTime @default(now())
 }
+
+model Email {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}

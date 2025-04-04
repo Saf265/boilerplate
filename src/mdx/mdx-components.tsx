@@ -1,9 +1,7 @@
-import { MdxImage } from "./mdx/MdxImage";
-import { MdxNote } from "./mdx/MdxNote";
-import { MdxPre } from "./mdx/MdxPre";
+import { MdxImage } from "./mdx-components/MdxImage";
+import { MdxNote } from "./mdx-components/MdxNote";
 
 export const MDX_COMPONENTS = {
-  pre: MdxPre,
   Note: MdxNote,
   Image: MdxImage,
 };

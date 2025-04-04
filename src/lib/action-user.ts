@@ -83,3 +83,23 @@ export const buyAction = async () => {
 
   redirect(checkout.url);
 };
+
+export const sendEmail = async (email: string) => {
+  const isEmailExist = await prisma.email.findUnique({
+    where: {
+      email,
+    },
+  });
+
+  if (isEmailExist) {
+    return false;
+  }
+
+  await prisma.email.create({
+    data: {
+      email,
+    },
+  });
+
+  return true;
+};
