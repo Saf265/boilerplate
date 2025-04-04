@@ -18,7 +18,7 @@ export default function Socials() {
           </div>
           <div className="flex space-x-4">
             <Link
-              href="#" // TODO: change this
+              href="https://www.tiktok.com/@quicktome.ai" // TODO: change this
               referrerPolicy="no-referrer"
               target="_blank"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -27,7 +27,7 @@ export default function Socials() {
               <span className="sr-only">Tiktok</span>
             </Link>
             <Link
-              href="#" // TODO: change this
+              href="https://www.instagram.com/quicktomeai" // TODO: change this
               referrerPolicy="no-referrer"
               target="_blank"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"

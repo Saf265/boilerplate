@@ -64,19 +64,10 @@ CREATE TABLE "Authenticator" (
 );
 
 -- CreateTable
-CREATE TABLE "Feedback" (
-    "id" TEXT NOT NULL,
-    "feedback" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
-    CONSTRAINT "Feedback_pkey" PRIMARY KEY ("id")
-);
-
--- CreateTable
 CREATE TABLE "Email" (
     "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Email_pkey" PRIMARY KEY ("id")
 );

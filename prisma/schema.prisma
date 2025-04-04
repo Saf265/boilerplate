@@ -79,14 +79,10 @@ model Authenticator {
   @@id([userId, credentialID])
 }
 
-model Feedback {
-  id        String   @id @default(cuid())
-  feedback  String
-  createdAt DateTime @default(now())
-}
-
 model Email {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  createdAt DateTime @default(now())
+  id    String   @id @default(cuid())
+  email String
+  at    DateTime @default(now())
+
+  @@unique([email])
 }

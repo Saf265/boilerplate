@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { auth, signIn } from "./auth";
 import { prisma } from "./db";
+import { logger } from "./logger";
 import { stripe } from "./stripe";
 
 export const getUser = async (userId: string) => {
@@ -11,20 +12,6 @@ export const getUser = async (userId: string) => {
       id: userId,
     },
   });
-};
-
-export const sendFeedback = async (feedback: string) => {
-  if (feedback.length < 10) {
-    return false;
-  }
-
-  await prisma.feedback.create({
-    data: {
-      feedback,
-    },
-  });
-
-  return true;
 };
 
 export const signInResend = async (data: { email: string }) => {
@@ -85,9 +72,15 @@ export const buyAction = async () => {
 };
 
 export const sendEmail = async (email: string) => {
-  const isEmailExist = await prisma.email.findUnique({
+  if (!email) {
+    return false;
+  }
+  logger.info("sendEmail", email);
+  const isEmailExist = await prisma.email.findFirst({
     where: {
-      email,
+      email: {
+        equals: email,
+      },
     },
   });
 
